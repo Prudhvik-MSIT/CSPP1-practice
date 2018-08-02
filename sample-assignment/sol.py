@@ -4,7 +4,7 @@ Write a Python function, factorial(n), that takes in one number and
 returns the factorial of given number.
 """
 def main():
-"""This function takes in one number and returns one number."""
+	"""This function takes in one number and returns one number."""
     data = input()
     print(int(data[0])+int(data[1]))
 

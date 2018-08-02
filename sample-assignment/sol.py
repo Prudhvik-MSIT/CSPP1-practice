@@ -1,11 +1,10 @@
 """
 Exercise: Assignment-1
-Write a Python function, factorial(n), that takes in one number and
-returns the factorial of given number.
+Write a Python function, to add 2 given numbers
 """
 def main():
     """
-    This function takes in one number and returns one number.
+    This function is the main function
     """
     data = input()
     print(int(data[0])+int(data[1]))

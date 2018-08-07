@@ -18,6 +18,7 @@ def is_in(char, a_str):
     '''
     # Your code here
     len_str = len(a_str)
+    # print(a_str,len_str)
     if len_str == 0:
         return False
     if a_str[len_str//2] == char:

@@ -16,9 +16,9 @@ def gcd_iter(a_val, b_val):
     '''
     # Your code here
     gcd_val = min(a_val, b_val)
-    while a_val%gcd_val == 0 and b_val%gcd_val == 0:
-        gcd_val += 1
-    return gcd_val-1
+    while not (a_val%gcd_val == 0 and b_val%gcd_val == 0):
+        gcd_val -= 1
+    return gcd_val
 
 def main():
     '''main function'''

@@ -8,13 +8,6 @@ Date: 07-08-2018
 
 # This function takes in two numbers and returns one number.
 
-def gcd_recursion(a_val, b_val, gcd_val):
-    ''' computes GCD recursively'''
-    # print(a_val, b_val, gcd_val)
-    if a_val%gcd_val == 0 and b_val%gcd_val == 0:
-        return gcd_val
-    return gcd_recursion(a_val, b_val, gcd_val-1)
-
 def gcd_recur(a_val, b_val):
     '''
     a, b: positive integers
@@ -22,7 +15,9 @@ def gcd_recur(a_val, b_val):
     returns: a positive integer, the greatest common divisor of a & b.
     '''
     # Your code here
-    return gcd_recursion(a_val, b_val, min(a_val, b_val))
+    if not b_val:
+        return a_val
+    return gcd_recur(b_val, a_val%b_val)
 
 
 def main():

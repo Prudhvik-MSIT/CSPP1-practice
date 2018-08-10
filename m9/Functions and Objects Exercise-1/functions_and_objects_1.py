@@ -12,7 +12,7 @@ def apply_to_each(list_to_be_modified, function_to_be_applied):
     function that converts the given testList = [1, -4, 8, -9] into
     [1, 4, 8, 9]
     '''
-    for iter_val, _ in enumerate(list_to_be_modified):
+    for (iter_val, _) in enumerate(list_to_be_modified):
         list_to_be_modified[iter_val] = function_to_be_applied(
             list_to_be_modified[iter_val])
 

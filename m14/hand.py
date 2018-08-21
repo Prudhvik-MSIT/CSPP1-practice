@@ -83,9 +83,15 @@ class Hand(object):
         returns: Boolean (if the word was or was not made)
         """
         # Your code here
-        raise NotImplementedError()
+        for each_char in word:
+            if word.count(each_char) > self.hand[each_char]:
+                return False
+        for each_char in word:
+            self.hand[each_char] -= each_char
+            if not self.hand[each_char]:
+                del (self.hand[each_char])
+        return True
 
-    
 myHand = Hand(7)
 print(myHand)
 print(myHand.calculateLen())

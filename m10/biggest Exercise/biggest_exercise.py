@@ -2,26 +2,32 @@
 #Write a procedure, called biggest, which returns the key corresponding to the entry with the largest number of values associated with it. If there is more than one such entry, return any one of the matching keys.
 
 
-def biggest(aDict):
+def biggest(inp_dict):
     '''
-    aDict: A dictionary, where all the values are lists.
+    inp_dict: A dictionary, where all the values are lists.
 
     returns: The key with the largest number of values associated with it
     '''
     # Your Code Here
-    
+    max_len = 0
+    max_len_key = ''
+
+    for iter_dict in inp_dict:
+        if max_len < len(inp_dict[iter_dict]):
+            max_len = len(inp_dict[iter_dict])
+            max_len_key = iter_dict
+    return max_len_key
 
 def main():
-    aDict={}
-    s=input()
-    l=s.split()
-    if l[0][0] not in aDict:
-        aDict[l[0][0]]=[l[1]]
+    inp_dict = {}
+    s = input()
+    l = s.split()
+    if l[0][0] not in inp_dict:
+        inp_dict[l[0][0]] = [l[1]]
     else:
-        aDict[l[0][0]].append(l[1])
+        inp_dict[l[0][0]].append(l[1])
         
-    print(biggest(aDict))
+    print(biggest(inp_dict))
 
-
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
